@@ -1,5 +1,4 @@
 *{margin: 0;
-    /* font-size: 14px; */
     color: black;
 }
 
@@ -12,7 +11,7 @@ a{
 }
 
 
-
+/* l'entête */
 header{
     position: sticky;
     top: 0;
@@ -24,6 +23,8 @@ header{
     align-items: center;
 }
 
+
+
 .logo{
     text-transform: uppercase;
     width: 30%;
@@ -32,7 +33,6 @@ header{
 }
 
 ul.lien_header{
-    /* background-color: yellow; */
     position: relative;
     display: inline-flex;
     justify-content: space-between;
@@ -46,6 +46,7 @@ ul.lien_header{
     opacity: 0.4;
 }
 
+/* le main(partie centrale) */
 main{
     display: block;
     position:relative;
@@ -58,11 +59,11 @@ main>nav.nav_main{
     position: relative;
     width: 100%;
     height: 40px;
-    background-color: coral;
     display:flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: sandybrown;
 }
 
 
@@ -77,6 +78,187 @@ main>section.section1{
     background-size: cover;
 }
 
+/* la 1ere partie du main */
 .section1 div>p{
+    position: relative;
+    display: block;
     color: #ffff;
 }
+
+.div_section1{
+    position: relative;
+    display: inline-block;
+    top: 50vh;
+    left:40%;
+}
+
+.div_section1>h1{
+    font-size:74px;
+    color: #ffff;
+}
+.div_section1>p{
+    font-size:24px;
+}
+
+div.div_reservation{
+    position: relative;
+    top: 62vh;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div_reservation>h3{
+    display: block;
+    position: relative;
+    margin-bottom: 30px;
+    background-color:rgba(80, 20, 40, 0.4);
+    color: white;
+}
+
+.div_reservation>form{
+    display: block;
+    position: relative;
+    justify-content: space-between;
+}
+
+/* la 2e partie */
+.section2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 100vh;
+}
+
+.section2>h1{
+    font-size: 50px;
+    /* text-align: center; */
+    padding-bottom: 70px;
+    border-bottom-style: dashed;
+    border-bottom-color: black;
+}
+
+.section2>p{
+    font-size: 24px;
+    text-align: center;
+}
+
+.section2>a{
+    background-color: brown;
+    font-size: 30px;
+    text-align: center;
+}.section2>a:hover{
+    opacity: 0.5;
+    text-align: center;
+}
+
+/* la 3e partie */
+.section3{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+   
+}
+
+.event{
+   
+    height: 50vh;
+    display: flex;
+}
+.event_text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.event_text>h1{
+    font-size: 40px;
+}
+.image_event{
+    width: 50%;
+}
+
+.images{
+    
+    height: 50vh;
+    display: flex;
+}
+.images>a>span{
+    visibility: hidden;
+}
+.images>a{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.image1{background: url("Depositphotos_331039248_XL.jpg");
+}
+.image2{background: url("Depositphotos_194491158_S.jpg");
+}
+.image3{background: url("Depositphotos_194491158_XL.jpg"); 
+}
+
+
+/* la 4e partie */
+.section4{
+    position: relative;
+    width: 100%;
+    background-color: gray;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* le footer */
+footer{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background-color: cornflowerblue;
+    display: flex;
+}
+
+
+.footer1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    font-size: 30px;
+}
+
+.footer2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+
+
+.formulaire{
+height: 30px;
+}
+
+.formulaire:hover{
+    cursor: pointer;
+
+}
+
+.bouton{
+    height: 30px;
+    background-color:khaki;
+    cursor: pointer;
+}
+
