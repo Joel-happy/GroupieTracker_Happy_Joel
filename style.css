@@ -1,9 +1,18 @@
 *{margin: 0;
     color: black;
 }
-
-body{
+html{
     width: 100%;
+}
+
+body{width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex: 1 0 auto;
 }
 
 a{
@@ -18,12 +27,12 @@ header{
     z-index: 1;
     display: flex;
     width: 100%;
-    height:10vh ;
+    height: 10vh;
     background-color:#fdfdfd;
     align-items: center;
+    order: 1;
+    flex: 1 0 auto;
 }
-
-
 
 .logo{
     text-transform: uppercase;
@@ -36,6 +45,7 @@ ul.lien_header{
     position: relative;
     display: inline-flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 30%;
     margin: 0 30px;
     text-transform: uppercase;
@@ -48,28 +58,35 @@ ul.lien_header{
 
 /* le main(partie centrale) */
 main{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
     position:relative;
     width: 100%;
     height: auto;
+    order: 2;
 }
 
 
-main>nav.nav_main{
+.nav_main{
     position: relative;
     width: 100%;
     height: 40px;
     display:flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background-color: sandybrown;
+    background-color: #a1def5;
 }
 
-
-main>section.section1{
+/* la 1ere partie du main */
+.section1{
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
     width:100%;
     height: 100vh;
     background: url(Depositphotos_194491158_XL.jpg);
@@ -78,18 +95,16 @@ main>section.section1{
     background-size: cover;
 }
 
-/* la 1ere partie du main */
 .section1 div>p{
-    position: relative;
-    display: block;
-    color: #ffff;
+    color: #fff;
 }
 
 .div_section1{
-    position: relative;
-    display: inline-block;
-    top: 50vh;
-    left:40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
 }
 
 .div_section1>h1{
@@ -97,32 +112,33 @@ main>section.section1{
     color: #ffff;
 }
 .div_section1>p{
+    
     font-size:24px;
 }
 
 div.div_reservation{
-    position: relative;
-    top: 62vh;
     padding: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
     align-items: center;
 }
 
 .div_reservation>h3{
-    display: block;
-    position: relative;
     margin-bottom: 30px;
     background-color:rgba(80, 20, 40, 0.4);
     color: white;
 }
 
-.div_reservation>form{
-    display: block;
-    position: relative;
-    justify-content: space-between;
-}
+.formulaire{
+   height: 30px;
+    } 
+ .formulaire:hover{
+        cursor: pointer;
+        opacity: 1;
+    }
 
 /* la 2e partie */
 .section2{
@@ -131,6 +147,8 @@ div.div_reservation{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
     background-color: #f0f0f0;
     width: 100%;
     height: 100vh;
@@ -138,7 +156,6 @@ div.div_reservation{
 
 .section2>h1{
     font-size: 50px;
-    /* text-align: center; */
     padding-bottom: 70px;
     border-bottom-style: dashed;
     border-bottom-color: black;
@@ -160,23 +177,23 @@ div.div_reservation{
 
 /* la 3e partie */
 .section3{
-    position: relative;
     width: 100%;
     height: 100vh;
-   
 }
 
 .event{
-   
     height: 50vh;
     display: flex;
+    flex: 1 0 auto;
 }
 .event_text{
     width: 50%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    flex: 1 0 auto;
 }
 .event_text>h1{
     font-size: 40px;
@@ -189,6 +206,7 @@ div.div_reservation{
     
     height: 50vh;
     display: flex;
+    flex: 1 0 auto;
 }
 .images>a>span{
     visibility: hidden;
@@ -216,6 +234,8 @@ div.div_reservation{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
 }
 
 
@@ -226,7 +246,8 @@ footer{
     height: 40vh;
     background-color: cornflowerblue;
     display: flex;
-}
+    order: 3;
+    flex: 1 0 auto;}
 
 
 .footer1{
@@ -234,6 +255,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex: 1 0 auto;
     width: 50%;
     font-size: 30px;
 }
@@ -243,18 +265,10 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    flex: 1 0 auto;
     width: 50%;
 }
 
-
-.formulaire{
-height: 30px;
-}
-
-.formulaire:hover{
-    cursor: pointer;
-
-}
 
 .bouton{
     height: 30px;
@@ -262,3 +276,33 @@ height: 30px;
     cursor: pointer;
 }
 
+/* responsive */
+@media only screen and (min-width: 320px) and (max-width:425px) {
+  body{
+    width: 100%;
+  }
+    header{
+        position: sticky;
+        width:100%;
+        padding:10%;
+    }
+    ul.lien_header{
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .section1,.section2,.section3,.section4{
+        width: 100%;
+    }
+
+   .formulaire{
+    width: 100%;
+   }
+   
+   .images>a{
+    background-size:cover;
+    background-position: center;
+   }
+  
+
+}
