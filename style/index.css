@@ -14,17 +14,25 @@ header{
     z-index: 1;
     display: flex;
     width: 100%;
-    height:10vh ;
+    height: 20vh;
     background-color:#fdfdfd;
     align-items: center;
+    order: 1;
+    flex: 1 0 auto;
 }
 
 .logo{
     text-transform: uppercase;
-    width: 30%;
-    height: auto;
+    width: 10%;
+    height: 20vh;
     list-style-type: none;
+    background-image: url(../images/logo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 20%;
 }
+
 
 ul.lien_header{
     position: relative;
@@ -37,14 +45,19 @@ ul.lien_header{
 }
 
 .lien_header>li>a:hover{
+    color:#4C1B1B ;
     opacity: 0.4;
 }
+
+
 
 main{
     width: 100%;
     height: 100vh;
     text-align: center;
-    background-color: blueviolet;
+    background-image:url(../images/presentation.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* le footer */
@@ -52,7 +65,7 @@ footer{
     position: relative;
     width: 100%;
     height:60vh;
-    background-color: cornflowerblue;
+    background-color: #4C1B1B;
     display: flex;
     order: 3;
     flex: 1 0 auto;}
