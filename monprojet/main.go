@@ -1,19 +1,30 @@
+package main 
 
+import (
+	"encoding/json"
+	
+	"io/ioutil"
+)
 
-
-func getDataFromAPI() ([]Cocktail, error) {
-    url := "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
-    response, err := http.Get(url)
+func getCocktails() ([]Cocktail, error) {
+    resp, err := http.Get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
     if err != nil {
         return nil, err
     }
-    defer response.Body.Close()
 
-    var cocktails CocktailResponse
-    err = json.NewDecoder(response.Body).Decode(&cocktails)
+    defer resp.Body.Close()
+
+    body, err := ioutil.ReadAll(resp.Body)
     if err != nil {
         return nil, err
     }
 
-    return cocktails.Cocktails, nil
+    var response CocktailResponse
+
+    err = json.Unmarshal(body, &response)
+    if err != nil {
+        return nil, err
+    }
+
+    return response.Cocktails, nil
 }
